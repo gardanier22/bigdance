@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import teams from './CollegeBasketballTeams.json';
 
-const teamsList = teams.teams;
+const ballTeams = teams.teams;
 
 interface NcaamTeams {
   tid: number;
@@ -23,11 +23,11 @@ class Team extends React.Component<NcaamTeams> {
     const team = this.props;
     return (
       <div>
-        <h3>School: {team.school}</h3>
-        <h4>Mascot: {team.name}</h4>
-        <h4>
+        <h4>School: {team.school}</h4>
+        <h5>Mascot: {team.name}</h5>
+        <h5>
           Location: {team.city}, {team.state}
-        </h4>
+        </h5>
       </div>
     );
   }
@@ -36,7 +36,7 @@ class Team extends React.Component<NcaamTeams> {
 function Teams() {
   return (
     <div>
-      {teamsList.map((team) => (
+      {ballTeams.map((team) => (
         <Team {...team} />
       ))}
     </div>
@@ -46,10 +46,16 @@ function Teams() {
 function Header() {
   return (
     <div className="Header">
-      <h1>Lets Go Dancing!!!</h1>
+      <h1>Lets Go To The Ball!!!</h1>
       <h2>
-        Below we have all the information about the teams competeing at the ball
+        Below we have all the information about the teams competeing at the Big
+        Dance!
       </h2>
+      <h2>
+        Don't wanna spoil the ending but you already know the Montana Grizzlies
+        are taking that chip!!!
+      </h2>
+      <h3>#UpWithMontanaBoys</h3>
     </div>
   );
 }
